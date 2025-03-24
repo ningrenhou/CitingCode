@@ -1,0 +1,54 @@
+/* Lines 2 through 4 are my own code. */
+body {
+    background-color: rgb(247, 244, 222); /* Change background color */
+  }
+
+/*Lines 7 through 10 are from tutorial: https://www.w3schools.com/css/css_grid_container.asp */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto; /* This is here so that the pictures are arranged in an order of three per row. */
+  }
+  
+/* Lines 13 through 53 are from tutorial: https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+  .container {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 10px; 
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+    
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #c05110;
+  }
+    
+  .container:hover .overlay {
+    opacity: 1;
+  }
+    
+  .text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/* The ones above are to resize the image and the size of the text that appears when the mouse hovers over the image. */
