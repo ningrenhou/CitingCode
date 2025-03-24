@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--The code for lines 13 through 16 comes from here: https://www.w3schools.com/css/css_grid_container.asp-->
+        <!--The code for lines 18 through 58 comes from here: https://www.w3schools.com/howto/howto_css_image_overlay.asp-->
+        <!--Lines 9 through 11 are my own code.-->
+        <style>
+          body {
+            background-color: rgb(247, 244, 222);
+          }
+
+          .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+          }
+          
+          .container {
+            position: relative;
+            width: 100%;
+            display: block;
+            margin: 10px; 
+          }
+            
+          .image {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+            
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #c05110;
+          }
+            
+          .container:hover .overlay {
+            opacity: 1;
+          }
+            
+          .text {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        </style>
+    </head>
+    <!--Lines 63 and 64 are my own code.-->
+    <body>
+        <h1 style="color:rgb(217, 110, 100);text-align:center;">Some of my very favorite pictures</h1>
+        <p Style="color:rgb(90, 6, 6);text-align:center;">Here we have Evan, Blade, Mydei, Yuan Ji, Kamisato Ayato...</p>
+   
+    <!--Lines 67 through 71 are my own code.-->
+      <Li>Bland's picture from <a href="https://www.youtube.com/watch?v=mpFz6vKnC9E">YouTuBe</a></Li>
+      <Li>Evan's picture from <a href="https://weibo.com/7543165294/5121967307098944">Weibo</a></Li>
+      <Li>Mydei's picture from <a href="https://x.com/minato_0100/status/1902274821872087187?s=46&t=KENMBiUijIvW9RhHz0YcdQ">X</a></Li>
+      <Li>Yuan Ji's picture from <a href="https://weibo.com/7513800471/4913215492070592">Weibo</a></Li>
+      <Li>Kamisato Ayato's picture from <a href="https://weibo.com/6593199887/5016144891874875">Weibo</a></Li>
+
+    <!--The code for lines 75 comes from here: https://www.w3schools.com/css/css_grid_container.asp-->
+    <!--The code for lines 77 through 118 comes from here: https://www.w3schools.com/howto/howto_css_image_overlay.asp-->
+      <div class="grid-container">
+
+        <div class="container">
+          <img src="images/Blade.JPG" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Blade</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="images/Evan.jpg" alt="Evan" class="image">
+          <div class="overlay">
+              <div class="text">Evan</div>
+          </div>
+        </div>
+
+      <div class="container">
+        <img src="images/Mydei.JPG" alt="Mydei" class="image">
+        <div class="overlay">
+            <div class="text">Mydei</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="images/Yuan Ji.JPG" alt="Yuan Ji" class="image">
+        <div class="overlay">
+            <div class="text">Yuan Ji</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="images/Kamisato Ayato.JPG" alt="Kamisato Ayato" class="image">
+        <div class="overlay">
+            <div class="text">Kamisato Ayato</div>
+      </div>
+      </div>
+
+      <div class="container">
+        <img src="images/Tuantuan.JPG" alt="Tuantuan" class="image">
+        <div class="overlay">
+            <div class="text">Oh! This is my cat!</div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
